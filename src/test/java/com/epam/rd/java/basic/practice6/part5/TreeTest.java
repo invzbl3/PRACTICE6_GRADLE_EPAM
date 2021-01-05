@@ -62,76 +62,42 @@ public class TreeTest {
     }
 
     @Test
+    public void removeFromRightSubtree() {
+        Tree<Integer> testTree = new Tree<>();
+        testTree.add(2);
+        testTree.add(5);
+        testTree.add(3);
+        testTree.add(0);
+        testTree.add(4);
+        testTree.add(1);
+        assertTrue(testTree.remove(2));
+        assertTrue(testTree.remove(5));
+        assertTrue(testTree.remove(3));
+        assertTrue(testTree.remove(0));
+        assertTrue(testTree.remove(4));
+    }
+
+    @Test
+    public void removeFromLeftSubtree() {
+        Tree<Integer> testTree = new Tree<>();
+
+        testTree.add(7);
+        testTree.add(6);
+        testTree.add(0);
+
+        testTree.add(2);
+        testTree.add(1);
+        testTree.add(4);
+        testTree.add(3);
+
+        assertTrue(testTree.remove(2));
+        assertTrue(testTree.remove(4));
+        assertTrue(testTree.remove(6));
+    }
+
+    @Test
     public void demoTest() {
         Demo.main(new String[] { });
         Assert.assertTrue("Assertion to be compliant", true);
-    }
-    
-        @Test
-    public void shouldTestRemoveMethod() {
-        Tree<Integer> testTree = new Tree<>();
-        testTree.add(0);
-        testTree.add(1);
-        testTree.add(2);
-        testTree.add(3);
-        testTree.add(4);
-        testTree.add(5);
-        assertTrue(testTree.remove(0));
-        assertTrue(testTree.remove(1));
-        assertTrue(testTree.remove(2));
-        assertTrue(testTree.remove(3));
-        assertTrue(testTree.remove(4));
-        assertTrue(testTree.remove(5));
-    }
-
-    @Test
-    public void shouldTestRemoveMethodMixed() {
-        Tree<Integer> testTree = new Tree<>();
-        testTree.add(2);
-        testTree.add(5);
-        testTree.add(3);
-        testTree.add(0);
-        testTree.add(4);
-        testTree.add(1);
-        assertTrue(testTree.remove(2));
-        assertTrue(testTree.remove(5));
-        assertTrue(testTree.remove(3));
-        assertTrue(testTree.remove(0));
-        assertTrue(testTree.remove(4));
-        assertTrue(testTree.remove(1));
-    }
-
-    @Test
-    public void shouldTestRemoveMethodMixed2() {
-        Tree<Integer> testTree = new Tree<>();
-        testTree.add(5);
-        testTree.add(0);
-        testTree.add(2);
-        testTree.add(1);
-        testTree.add(4);
-        testTree.add(3);
-        assertTrue(testTree.remove(5));
-        assertTrue(testTree.remove(0));
-        assertTrue(testTree.remove(2));
-        assertTrue(testTree.remove(1));
-        assertTrue(testTree.remove(4));
-        assertTrue(testTree.remove(3));
-    }
-
-    @Test
-    public void shouldTestRemoveMethodMixed3() {
-        Tree<Integer> testTree = new Tree<>();
-        testTree.add(4);
-        testTree.add(1);
-        testTree.add(2);
-        testTree.add(3);
-        testTree.add(0);
-        testTree.add(5);
-        assertTrue(testTree.remove(4));
-        assertTrue(testTree.remove(1));
-        assertTrue(testTree.remove(2));
-        assertTrue(testTree.remove(3));
-        assertTrue(testTree.remove(0));
-        assertTrue(testTree.remove(5));
     }
 }
